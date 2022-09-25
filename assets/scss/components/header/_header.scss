@@ -1,0 +1,7 @@
+@use "assets/scss/presets/skin" as *;
+@use "assets/scss/presets/variables" as *;
+
+.header {
+    min-height: 100vh;
+    background-color: $color-primary;
+}

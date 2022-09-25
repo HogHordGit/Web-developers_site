@@ -1,1 +1,8 @@
+@use "libs/normalize.css/normalize";
 
+@use "components/header/header";
+@use "components/header/header-content";
+@use "components/header/header-logo";
+@use "components/header/header-menu";
+@use "components/header/header-navbar";
+@use "components/header/header-overlay";
