@@ -1,0 +1,22 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+    &__content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        background-color: green;
+    }
+    &__title {
+        margin: 0;
+        text-align: center;
+    }
+    &__container {
+        @extend %container;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,19 @@
+@use "../presets" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+h1 {
+
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,7 +1,16 @@
-@use "assets/scss/presets/skin" as *;
-@use "assets/scss/presets/variables" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .header {
+    position: relative;
     min-height: 100vh;
     background-color: $color-primary;
+    background-image: url(../img/img-header.png);
+    background-position: center center;
+    background-size: cover;
+    color: $color-light;
+
+    display: grid;
+    align-content: center;
+    padding: 150px 0;
 }
