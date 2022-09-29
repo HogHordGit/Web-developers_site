@@ -166,6 +166,35 @@ template {
   display: none;
 }
 
+.menu__container,
+.header__container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 250px;
+  height: 60px;
+  padding: 0.5em 1em;
+
+  letter-spacing: 0.1em;
+
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  font-size: 1.125rem;
+}
+
 *,
 *::before,
 *::after {
@@ -175,18 +204,30 @@ template {
 
 html {
   overflow-y: scroll;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
 }
 
 a {
   text-decoration: none;
+
+  color: #ffffff;
 }
 
-.menu__container,
-.header__container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 .header {
   position: relative;
 
@@ -209,11 +250,10 @@ a {
   z-index: 1;
 
   width: 100%;
-
-  background-color: green;
 }
 .header__title {
   margin: 0;
+  margin: 0 0 65px 0;
 
   text-align: center;
 }
@@ -224,6 +264,8 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
+  gap: 20px;
 }
 
 .menu {
@@ -232,16 +274,35 @@ a {
   top: 0;
   right: 0;
   left: 0;
-
-  background-color: red;
 }
 .menu__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.menu__logo {
+  letter-spacing: 0.25em;
+
+  font-size: 1.5rem;
+}
+.menu__link-logo {
+  display: block;
+
+  padding: 20px;
+}
+.menu__accent {
+  display: inline-block;
+
+  margin-right: 7px;
+  padding: 20px 10px;
+
+  border: 3px solid #d53d27;
 }
 .menu__list {
   display: -webkit-box;
@@ -254,6 +315,11 @@ a {
   list-style: none;
 
   gap: 20px;
+}
+.menu__link {
+  display: block;
+
+  padding: 20px 10px;
 }
 
 .header__overlay {

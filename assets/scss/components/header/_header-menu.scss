@@ -7,20 +7,37 @@
     left: 0;
     right: 0;
     top: 0;
-    background-color: red;
 
     &__container {
+        @extend %container;
+
         display: flex;
         justify-content: space-between;
-
-        @extend %container;
+        align-items: center;
     }
     &__logo {
-
+        font-size: 1.5rem;
+        letter-spacing: 0.25em;
+    }
+    &__link-logo {
+        display: block;
+        padding: 20px;
+        
+    }
+    &__accent {
+        display: inline-block;
+        border: 3px solid $color-highlight;
+        padding: 20px 10px;
+        margin-right: 7px
     }
     &__list {
-        display: flex;
-        gap: 20px;
         @include unlist;
+
+        display: flex;
+        gap: $gap;
+    }
+    &__link {
+        display: block;
+        padding: $gap $gap-sm;
     }
 }
