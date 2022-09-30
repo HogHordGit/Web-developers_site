@@ -21,8 +21,7 @@
     }
     &__link-logo {
         display: block;
-        padding: 20px;
-        
+        padding: 20px 20px 20px 0px;
     }
     &__accent {
         display: inline-block;
@@ -31,12 +30,14 @@
         margin-right: 7px
     }
     &__list {
-        @include unlist;
+        @include unlist(0 (-$gap-sm) 0 0);
 
         display: flex;
         gap: $gap;
     }
     &__link {
+        font-size: 1.125rem;
+        letter-spacing: 0.1em;
         display: block;
         padding: $gap $gap-sm;
     }
