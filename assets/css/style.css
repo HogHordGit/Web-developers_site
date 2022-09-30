@@ -210,7 +210,7 @@ html {
 }
 
 h1 {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 
   font-family: "Roboto Slab", serif;
   font-size: 3.75rem;
@@ -253,7 +253,7 @@ a {
 }
 .header__title {
   margin: 0;
-  margin: 0 0 65px 0;
+  margin: 0 0 53px;
 
   text-align: center;
 }
@@ -287,7 +287,7 @@ a {
   justify-content: space-between;
 }
 .menu__logo {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
 
   font-size: 1.5rem;
 }
@@ -299,8 +299,8 @@ a {
 .menu__accent {
   display: inline-block;
 
-  margin-right: 7px;
-  padding: 20px 10px;
+  margin-right: 4px;
+  padding: 14px 1px 13px 5px;
 
   border: 3px solid #d53d27;
 }
@@ -321,7 +321,7 @@ a {
 
   padding: 20px 10px;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.089em;
 
   font-size: 1.125rem;
 }
