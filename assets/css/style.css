@@ -195,6 +195,20 @@ template {
   font-size: 1.125rem;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -335,4 +349,8 @@ a {
 
   opacity: 0.8;
   background-color: #2d3651;
+}
+
+.item-skill {
+  background-color: red;
 }
