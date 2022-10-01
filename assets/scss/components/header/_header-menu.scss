@@ -2,49 +2,56 @@
 @use "../../mixins" as *;
 
 .menu {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    top: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
 
-    &__container {
-        @extend %container;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__logo {
-        font-size: 1.5rem;
-        letter-spacing: 0.22em;
-    }
-    &__link-logo {
-        display: block;
-        padding: 20px 20px 20px 0px;
-    }
-    &__accent {
-        display: inline-block;
-        border: 3px solid $color-highlight;
-        padding: 14px 1px 13px 5px;
-        margin-right: 4px
-    }
-    &__list {
-        @include unlist(0 (-$gap-sm) 0 0);
+    @extend %container;
+  }
+  &__logo {
+    letter-spacing: 0.22em;
 
-        display: flex;
-        gap: $gap;
-    }
-    &__link {
-        font-size: 1.125rem;
-        letter-spacing: 0.089em;
-        display: block;
-        padding: $gap $gap-sm;
-        transition: color 0.5s;
+    font-size: 1.5rem;
+  }
+  &__link-logo {
+    display: block;
 
-        &:hover,
-        &:focus {
-            color: $color-accent;
-        }
+    padding: 20px 20px 20px 0;
+  }
+  &__accent {
+    display: inline-block;
+
+    margin-right: 4px;
+    padding: 14px 1px 13px 5px;
+
+    border: 3px solid $color-highlight;
+  }
+  &__list {
+    display: flex;
+
+    gap: $gap;
+    @include unlist(0 (-$gap-sm) 0 0);
+  }
+  &__link {
+    display: block;
+
+    padding: $gap $gap-sm;
+
+    transition: color 0.5s;
+    letter-spacing: 0.089em;
+
+    font-size: 1.125rem;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
     }
+  }
 }

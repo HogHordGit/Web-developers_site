@@ -1,23 +1,25 @@
 @use "../../../mixins" as *;
 @use "../../../presets" as *;
-
 $local-gap: calc(40px / 3);
 
 .skills {
-    &__container {
-        padding: $gap-sm;
-        display: grid;
-        gap: $gap-sm;
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: calc(33.33333vh - #{$local-gap});
-        grid-template-areas: "a1 a1 a2 a3"
-                             "a4 a5 a5 a6"
-                             "a7 a8 a9 a6";
-    }
-    &__buttons {
-        display: flex;
-        justify-content: center;
-        padding-top: $gap-sm;
-        margin-bottom: $gap-x2;
-    }
+  &__container {
+    display: grid;
+
+    padding: $gap-sm;
+
+    gap: $gap-sm;
+    grid-auto-rows: calc(33.33333vh - #{$local-gap});
+    grid-template-areas: "a1 a1 a2 a3"
+    "a4 a5 a5 a6"
+    "a7 a8 a9 a6";
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: $gap-x2;
+    padding-top: $gap-sm;
+  }
 }
