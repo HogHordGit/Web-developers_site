@@ -40,5 +40,11 @@
         letter-spacing: 0.089em;
         display: block;
         padding: $gap $gap-sm;
+        transition: color 0.5s;
+
+        &:hover,
+        &:focus {
+            color: $color-accent;
+        }
     }
 }
