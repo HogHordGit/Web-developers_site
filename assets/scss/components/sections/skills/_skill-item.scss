@@ -8,11 +8,8 @@
 
   &__title {
     z-index: 2;
-
     margin: 0;
-
     letter-spacing: 0.1em;
-
     font-size: 1.25rem;
     font-weight: 700;
 
@@ -60,7 +57,7 @@
 }
 
 @for $i from 1 through 9 {
-  .item-skill:nth-last-of-type(#{$i}) {
+  .item-skill:nth-of-type(#{$i}) {
     grid-area: a#{$i};
   }
 }
