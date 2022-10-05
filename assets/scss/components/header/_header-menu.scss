@@ -8,6 +8,71 @@
   right: 0;
   left: 0;
 
+  @include md {
+    box-shadow: 0 0 10px black;
+    background-color: rgba($color-gray-dark, 0.25);
+  }
+  
+  &__btn {
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: $gap 0;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+  
+    &-row {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transition: .25s ease-in-out;
+  
+      &:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      &:nth-child(2) {
+        top: 9px;
+        transform-origin: left center;
+      }
+      &:nth-child(3) {
+        top: 18px;
+        transform-origin: left center;
+      }
+    }
+    
+    &--active span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: -3.5px;
+        left: 4px;
+      }
+    }
+    
+    &--active span {
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+    }
+  
+    &--active span {
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 17.5px;
+        left: 4px;
+      }
+    }
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -34,15 +99,36 @@
     border: 3px solid $color-highlight;
   }
   &__list {
-    display: flex;
+    @include md-min {
+      @include unlist(0 (-$gap-sm) 0 0);
+      display: flex;
+      gap: $gap;
+    }
+    @include md {
+      display: none;
+      @include unlist;
+    }
 
-    gap: $gap;
-    @include unlist(0 (-$gap-sm) 0 0);
+    &.active {
+      position: absolute;
+      right: $gap;
+      top: 100%;
+      display: block;
+      background-color: red;
+    }
+  }
+  &__item {
+    margin: $gap $gap-sm;
   }
   &__link {
     display: block;
 
-    padding: $gap $gap-sm;
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     transition: color 0.5s;
     letter-spacing: 0.089em;
@@ -55,3 +141,7 @@
     }
   }
 }
+
+
+
+

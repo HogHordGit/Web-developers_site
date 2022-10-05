@@ -10,8 +10,14 @@
     z-index: 2;
     margin: 0;
     letter-spacing: 0.1em;
-    font-size: 1.25rem;
     font-weight: 700;
+    
+    @include lg-min {
+      font-size: 1.25rem;
+    }
+    @include lg {
+      font-size: 1.125rem;
+    }
 
     @include abs-position;
   }
