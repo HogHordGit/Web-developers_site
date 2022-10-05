@@ -6,33 +6,28 @@ $local-gap: calc(40px / 3);
   &__container {
     display: grid;
 
+    gap: $gap-sm;
     @include sm-min {
       padding: $gap-sm;
     }
     @include sm {
       padding: $gap;
     }
-    gap: $gap-sm;
-
     @include lg-min {
       grid-template-areas: "a1 a1 a2 a3"
-                           "a4 a5 a5 a6"
-                           "a7 a8 a9 a6";
+      "a4 a5 a5 a6"
+      "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
-      gap: $gap-sm;
     }
-
     @include lg-md {
       grid-template-areas: "a1 a2"
-                           "a3 a2"
-                           "a4 a4"
-                           "a5 a6"
-                           "a5 a7"
-                           "a8 a9";
+      "a3 a2"
+      "a4 a4"
+      "a5 a6"
+      "a5 a7"
+      "a8 a9";
       grid-template-columns: repeat(2, 1fr);
-      gap: $gap-sm;
     }
-
     @include md-sm {
       grid-template-areas: "a1 a2"
       "a3 a2"
@@ -41,10 +36,12 @@ $local-gap: calc(40px / 3);
       "a5 a7"
       "a8 a9";
       grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-min {
       gap: $gap-sm;
     }
-    
     @include sm {
+      gap: $gap;
       grid-template-areas: "a1"
       "a2"
       "a3"
@@ -54,8 +51,6 @@ $local-gap: calc(40px / 3);
       "a7"
       "a8"
       "a9";
-      grid-template-columns: 1fr;
-      gap: $gap;
     }
 
     @media (min-height: 690.8px) {
@@ -69,13 +64,13 @@ $local-gap: calc(40px / 3);
   &__buttons {
     display: flex;
     justify-content: center;
+
     width: 100%;
 
     @include sm-min {
-      padding-top: $gap-sm;
       margin-bottom: $gap-x2;
+      padding-top: $gap-sm;
     }
-
     @include sm {
       margin-bottom: $gap;
     }
