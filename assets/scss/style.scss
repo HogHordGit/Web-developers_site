@@ -4,3 +4,8 @@
 
 @use "components/header";
 @use "components/sections/skills";
+@use "components/sections/section-about";
+
+body {
+    background-color: red;
+}
