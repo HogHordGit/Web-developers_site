@@ -11,7 +11,7 @@
     color: #637588;
 }
 :-ms-input-placeholder {
-    color: #637588  red;
+    color: #637588;
 }
 
 .form {
@@ -43,6 +43,20 @@
         font-weight: 400;
         padding: 3px 0px 0px 32px;
         background-color: #38405A;
+        transition: background-color 0.3s linear;
+    }
+    &__input:hover {
+        background-color: #4c546b;
+        border: 2px solid #6F7588;
+        border-bottom: 2px solid #ffffff;
+        padding: 1px 0px 0px 30px;
+    }
+    &__input:focus {
+        outline: none;
+        background-color: #4c546b;
+        border: 2px solid #6F7588;
+        border-bottom: 2px solid #ffffff;
+        padding: 1px 0px 0px 30px;
     }
     &__submit {
         font-size: 1.125rem;
@@ -55,6 +69,7 @@
         cursor: pointer;
     }
     &__submit:hover {
+        padding: 3px 0px 0px 0px;
         border: 2px solid #ffffff;
         padding-bottom: 2px;
         background-color: #d66926;
