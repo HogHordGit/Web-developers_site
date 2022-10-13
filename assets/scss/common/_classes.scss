@@ -57,6 +57,14 @@
   }
 }
 
+.-form-size {
+  width: 420px;
+  height: 60px;
+  border: 0;
+
+  border-bottom: 2px solid #6A7083;
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

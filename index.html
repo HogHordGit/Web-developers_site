@@ -156,9 +156,9 @@
 							</div>
 							<div class="content-about__body">
 								<p class="content-about__text">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptates commodi eligendi perspiciatis non ipsam numquam, perferendis fugiat amet molestias provident unde, deleniti quo ducimus placeat voluptas!
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptates commodi eligendi perspiciatis non ipsam numquam, perferendis fugiat amet molestias provident unde, deleniti quo ducimus placeat <span class="zib">voluptas!</span> 
 								</p>
-								<p class="content-about__text">
+								<p class="content-about__text zib2">
 									Quisquam voluptatum quae veritatis quas odio dolores quis voluptas asperiores ex obcaecati reiciendis quidem ducimus et doloribus sed tempore, unde beatae aut consectetur eligendi ratione repellendus nulla pariatur. Explicabo enim officia iure blanditiis eos, velit.
 								</p>
 								<p class="content-about__text">
@@ -173,14 +173,38 @@
 							</div>
 						</div>
 
-						<div class="about__image">
-							<img class="about__img" src="assets/img/img-lamp-webdev.webp" width="267" height="480" alt="">
+						<div class="about__image-holder">
+							<div class="about__image">
+								<img class="about__img" src="assets/img/img-lamp-webdev.webp" alt="Image">
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
 			<section class="content__form form">
 				<h2 class="visually-hidden">Зоголовок 3</h2>
+
+				<div class="form__container">
+					<div class="form__holder form-block">
+						<form class="form-block__body" action="#">
+
+							<div class="form-block__item">
+								<label class="form-block__label" for="name_form"></label>
+								<input class="form-block__input -form-size" id="name_form" type="text" placeholder="Your name...">
+							</div>
+							<div class="form-block__item">
+								<label class="form-block__label" for="email_form"></label>
+								<input class="form-block__input -form-size" id="email_form" type="email" placeholder="Your email...">
+							</div>
+							<div class="form-block__button">
+								<input class="form-block__submit -form-size" type="submit" value="Subscribe">
+							</div>
+
+						</form>
+					</div>
+				</div>
+
 			</section>
 			<section class="content__posts posts">
 				<h2 class="visually-hidden">Зоголовок 4</h2>

@@ -23,20 +23,16 @@
         }
     }
     &__image {
+        display: flex;
+        align-items: center;
+
         margin-top: 10.5px;
         margin-right: 2.1px;
         
-        @include lg {
-            margin-left: -60px;
-        }
-        @include md {
-            margin-left: -70px;
-        }
+        
         @include sm {
-            text-align: center;
+            justify-content: center;
             margin-top: 50px;
-            margin-left: 0px;
-            margin-right: 0px;
         }
     }
     &__img {
@@ -82,7 +78,7 @@
     &__text {
         font-size: 1.125rem;
         letter-spacing: 0.049em;
-        line-height: 1.1555em;
+        line-height: 1.153em;
         color: $color-gray;
         font-weight: 400;
 
