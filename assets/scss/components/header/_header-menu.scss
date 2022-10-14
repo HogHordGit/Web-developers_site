@@ -115,8 +115,7 @@
     @include md-min {
       display: flex;
 
-      gap: $gap;
-      @include unlist(0 (-$gap-sm) 0 0);
+      @include unlist(0 (-$gap) 0 0);
     }
     @include md {
       position: absolute;
@@ -138,7 +137,7 @@
     display: block;
 
     transition: color 0.5s;
-    letter-spacing: 0.089em;
+    letter-spacing: 0.1em;
 
     font-size: 1.125rem;
 

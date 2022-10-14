@@ -18,21 +18,30 @@
         display: flex;
         gap: 100px;
 
+        @include lg {
+            gap: 50px;
+        }
+
+        @include md {
+            gap: 30px;
+        }
+
         @include sm {
             display: block;
         }
     }
     &__image {
+        height: 100%;
         display: flex;
         align-items: center;
-
-        margin-top: 10.5px;
+       
+        padding-bottom: 19px;
         margin-right: 2.1px;
-        
         
         @include sm {
             justify-content: center;
-            margin-top: 50px;
+            margin-top: 25px;
+            margin-right: 0px;
         }
     }
     &__img {
@@ -40,16 +49,16 @@
         height: 480px;
 
         @include lg {
-            width: 256px;
-            height: 459px;
+            width: 265px;
+            height: 480px;
         }
         @include md {
             width: 236px;
             height: 425px;
         }
         @include sm {
-            width: 271px;
-            height: 487px;
+            width: 266px;
+            height: 480px;
         }
     }
 }
@@ -82,7 +91,7 @@
         color: $color-gray;
         font-weight: 400;
 
-        @include md {
+        @include lg {
             font-size: 1rem;
         }
     }
@@ -103,6 +112,13 @@
 
                     background-color: rgba($color-gray, 0.1);
                     z-index: 999;
+
+                    @include lg {
+                        width: 1.5px;
+                    }
+                    @include md {
+                        width: 2.5px;
+                    }
                 }
             }
         }
