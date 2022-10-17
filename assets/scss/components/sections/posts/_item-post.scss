@@ -1,0 +1,39 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.item-post {
+    position: relative;
+
+    overflow: hidden;
+    background-color: #F2F2F2;
+    padding-bottom: 15.5px;
+    &__image {
+        width: 100%;
+        height: 300px;
+        background-position: center center;
+    }
+    &__title {
+        font-size: 1.125rem;
+        letter-spacing: 0.05em;
+        line-height: 1.15em;
+        color: #637588;
+        font-weight: 700;
+        font-family: "Roboto Slab";
+        text-align: center;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 226.5px;
+        padding: 0px 20px;
+        gap: 16px;
+    }
+    &__content {
+        font-size: 1rem;
+        line-height: 1.15em;
+        color: #637588;
+        font-weight: 400;
+        text-align: center;
+    }
+}

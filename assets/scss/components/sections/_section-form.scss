@@ -15,7 +15,6 @@
 }
 
 .form {
-    margin-bottom: 200px;
     background-color: $color-primary;
 
     &__container {
@@ -23,7 +22,11 @@
     }
     &__holder {
         width: 100%;
-        min-height: 120px;
+        height: 120px;
+
+        @include md {
+            height: auto;
+        }
     }
 }
 
@@ -37,6 +40,7 @@
         flex-wrap: wrap;
     }
     &__column {
+        margin-top: 0.5px;
         padding: 0px 10px 20px 10px;
         flex: 0 1 33.33333%;
 
@@ -58,14 +62,14 @@
         letter-spacing: 0.15em;
         line-height: 2.166em;
         font-weight: 400;
-        padding: 3px 0px 0px 32px;
+        padding: 0px 0px 0px 30px;
         background-color: #38405A;
         transition: background-color 0.3s linear;
     }
     &__input:hover {
         background-color: #4c546b;
         border: 2px solid #6F7588;
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 3px solid #ffffff;
         padding: 1px 0px 0px 30px;
     }
     &__input:focus {
@@ -80,7 +84,6 @@
         letter-spacing: 0.1em;
         color: #ffffff;
         font-weight: 400;
-        padding: 3px 0px 0px 0px;
         background-color: #424A63;
         transition: background-color 0.3s linear;
         cursor: pointer;
