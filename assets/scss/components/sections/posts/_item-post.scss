@@ -1,39 +1,89 @@
-@use "../../../mixins" as *;
 @use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .item-post {
-    position: relative;
+    transition: background-color 0.5s;
+    background-color: lighten($color-gray-light, 5%);
 
-    overflow: hidden;
-    background-color: #F2F2F2;
-    padding-bottom: 15.5px;
-    &__image {
-        width: 100%;
-        height: 300px;
-        background-position: center center;
-    }
     &__title {
         font-size: 1.125rem;
         letter-spacing: 0.05em;
-        line-height: 1.15em;
-        color: #637588;
+        line-height: 1.154em;
         font-weight: 700;
-        font-family: "Roboto Slab";
-        text-align: center;
+        font-family: $font-header;
+        color: $color-gray;
     }
-    &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 226.5px;
-        padding: 0px 20px;
-        gap: 16px;
-    }
-    &__content {
+
+    &__text {
         font-size: 1rem;
-        line-height: 1.15em;
-        color: #637588;
+        line-height: 1.153em;
+        color: $color-gray;
         font-weight: 400;
-        text-align: center;
+        font-family: $font-main;
+    }
+
+    &__image {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+
+        background-color: $color-primary;
+
+        img {
+            width: 100%;
+
+            transition: transform 0.5s;
+            object-fit: cover;
+        }
+    }
+
+    &:hover {
+        background-color: darken($color-gray-light, 5%);
+
+        .item-post__image img {
+            transform: scale(1.1);
+        }
+
+        .item-post__title {
+            color: $color-primary;
+        }
+
+        .item-post__text {
+            color: $color-primary;
+        }
+    }
+
+    &__link {
+        display: grid;
+        overflow: hidden;
+
+        height: 100%;
+
+        grid-template-rows: 300px 1fr;
+    }
+
+    &__content {
+        display: grid;
+        align-content: center;
+
+        padding: $gap;
+
+        .item-post__title {
+            transition: color 0.5s;
+            text-align: center;
+
+            font-family: $font-header;
+        }
+
+        .item-post__text {
+            transition: color 0.5s;
+            text-align: center;
+        }
+    }
+}
+
+@for $i from 1 through 6 {
+    .item-post:nth-of-type(#{$i}) {
+        grid-area: a#{$i};
     }
 }

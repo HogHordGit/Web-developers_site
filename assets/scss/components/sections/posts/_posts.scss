@@ -1,33 +1,72 @@
-@use "../../../mixins" as *;
 @use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .posts {
-    padding-top: 68.5px;
+    padding-top: 67px;
+    padding-bottom: 101px;
 
-    &__grid {
-        margin-top: 48px;
-        display: grid;
-
-        gap: $gap;
-
-        grid-template-areas: "a1 a1 a2 a3"
-                             "a4 a5 a6 a6";
-        grid-template-columns: repeat(4, 1fr);
-    }
     &__container {
         @extend %container;
     }
+
     &__title {
-        font-family: "Roboto Slab";
-        font-weight: 700;
         font-size: 2.5rem;
         letter-spacing: 0.1em;
-        color: #2d3651;
-    }
-}
+        line-height: 1.2em;
+        color: $color-primary;
+        font-weight: 700;
+        font-family: $font-header;
+        margin-bottom: 48px;
 
-@for $i from 1 through 9 {
-    .item-post:nth-of-type(#{$i}) {
-      grid-area: a#{$i};
+        @include lg-md {
+            font-size: 2rem;
+            letter-spacing: 0.09375em;
+        }
+        @include md {
+            font-size: 1.5rem;
+            letter-spacing: 0.08333em;
+        }
+        @include sm {
+            text-align: center;
+        }
     }
-  }
+
+    &__holder {
+        display: grid;
+
+        padding-bottom: $gap;
+        gap: $gap;
+    
+        @include lg-min {
+            grid-template-areas: "a1 a1 a2 a3" 
+                                 "a4 a5 a6 a6";
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include lg-md {
+            grid-template-areas: "a1 a1 a2" 
+                                 "a3 a4 a4" 
+                                 "a5 a5 a6";
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include md-sm {
+        grid-template-areas: "a1 a2" 
+                             "a3 a4" 
+                             "a5 a6";
+        grid-template-columns: 1fr 1fr;
+        }
+        @include sm {
+        grid-template-areas: "a1" 
+                             "a2" 
+                             "a3" 
+                             "a4" 
+                             "a5" 
+                             "a6";
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+    
+}

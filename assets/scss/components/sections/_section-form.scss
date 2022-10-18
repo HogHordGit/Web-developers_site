@@ -2,16 +2,16 @@
 @use "../../presets" as *;
 
 ::-webkit-input-placeholder {
-    color: #637588;
+    color: $color-gray;
 }
 :-moz-placeholder {
-    color: #637588;
+    color: $color-gray;
 }
 ::-moz-placeholder { 
-    color: #637588;
+    color: $color-gray;
 }
 :-ms-input-placeholder {
-    color: #637588;
+    color: $color-gray;
 }
 
 .form {
@@ -57,7 +57,7 @@
         }
     }
     &__input {
-        color: #ffffff;
+        color: $color-light;
         font-size: 1.125rem;
         letter-spacing: 0.15em;
         line-height: 2.166em;
@@ -69,29 +69,29 @@
     &__input:hover {
         background-color: #4c546b;
         border: 2px solid #6F7588;
-        border-bottom: 3px solid #ffffff;
+        border-bottom: 3px solid $color-light;
         padding: 1px 0px 0px 30px;
     }
     &__input:focus {
         outline: none;
         background-color: #4c546b;
         border: 2px solid #6F7588;
-        border-bottom: 2px solid #ffffff;
-        padding: 1px 0px 0px 30px;
+        border-bottom: 2px solid $color-light;
+        padding: 0px 0px 0px 30px;
     }
     &__submit {
         font-size: 1.125rem;
         letter-spacing: 0.1em;
-        color: #ffffff;
+        color: $color-light;
         font-weight: 400;
         background-color: #424A63;
         transition: background-color 0.3s linear;
         cursor: pointer;
     }
     &__submit:hover {
-        padding: 3px 0px 0px 0px;
-        border: 2px solid #ffffff;
+        padding: 2px 0px 0px 0px;
+        border: 2px solid $color-light;
         padding-bottom: 2px;
-        background-color: #d66926;
+        background-color: $color-accent;
     }
 }
