@@ -72,6 +72,16 @@
   border-bottom: 2px solid #6A7083;
 }
 
+.-focus-col {
+  display: block;
+  transition: color 0.5s;
+
+  &:hover,
+  &:focus {
+      color: $color-accent;
+  }
+}
+
 .visually-hidden {
   @include visually-hidden;
 }
