@@ -8,7 +8,7 @@
     &__title {
         font-size: 1.125rem;
         letter-spacing: 0.05em;
-        line-height: 1.15em;
+        line-height: 1.153em;
         font-weight: 700;
         font-family: $font-header;
         color: $color-gray;
@@ -75,8 +75,23 @@
     }
 }
 
+.-ln-hd-4 {
+    line-height: 1.16em;
+}
+
+.-ln-hd-5 {
+    margin-top: 15.2px;
+    line-height: 1.145em;
+}
+
+.item-post__span {
+    display: block;
+    margin-bottom: 0.8px;
+}
+
 @for $i from 1 through 6 {
     .item-post:nth-of-type(#{$i}) {
         grid-area: a#{$i};
     }
 }
+
