@@ -7,6 +7,15 @@
     letter-spacing: 0.055em;
   
     background-color: $color-gray-light;
+
+    @include md {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    @include sm {
+      padding-bottom: 55px;
+    }
   
     &__container {
         @extend %container;
@@ -17,16 +26,15 @@
         line-height: 1.2em;
         color: $color-primary;
         font-weight: 700;
-        font-family: $font-main;
+        font-family: $font-header;
         margin-bottom: 43px;
 
         @include lg-md {
             font-size: 2rem;
-            letter-spacing: 0.09375em;
         }
-        @include md-sm {
+        @include md {
             font-size: 1.5rem;
-            letter-spacing: 0.083333em;
+            margin-bottom: 35px;
         }
         @include sm {
             text-align: center;
@@ -58,15 +66,11 @@
         color: $color-gray;
         font-weight: 400;
 
-        @include md {
+        @include lg {
             font-size: 1rem;
         }
     }
     &__text {
-      @include lg-min {
-        font-size: 1.125rem;
-      }
-  
       &:first-of-type {
         position: relative;
   
@@ -103,6 +107,10 @@
       padding-top: 15px;
   
       justify-content: center;
+
+      @include sm {
+        padding-top: 0px;
+      }
     }
     &__img {
       max-width: 100%;
