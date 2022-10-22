@@ -644,12 +644,12 @@ a {
   max-height: 480px;
 }
 
-.text__1 {
+.text__item-1 {
   position: relative;
 
   line-height: 1.16em;
 }
-.text__1::after {
+.text__item-1::after {
   position: absolute;
   top: 0;
 
@@ -660,13 +660,13 @@ a {
 
   background-color: rgba(99, 117, 136, 0.1);
 }
-.text__2 {
+.text__item-2 {
   line-height: 1.14em;
 }
-.text__4 {
+.text__item-4 {
   line-height: 1.16em;
 }
-.text__5 {
+.text__item-5 {
   margin-top: -1px;
 
   line-height: 1.2em;
@@ -1055,7 +1055,7 @@ a {
     gap: 100px;
     grid-template-columns: 1fr 271px;
   }
-  .text__1::after {
+  .text__item-1::after {
     right: -50px;
   }
   .posts__holder {
@@ -1097,7 +1097,7 @@ a {
     gap: 40px;
     grid-template-columns: 1fr 271px;
   }
-  .text__1::after {
+  .text__item-1::after {
     right: -20px;
   }
   .posts__title {
@@ -1183,7 +1183,7 @@ a {
     gap: 20px;
     grid-template-columns: 1fr 236px;
   }
-  .text__1::after {
+  .text__item-1::after {
     right: -10px;
   }
   .posts__holder {
@@ -1233,7 +1233,7 @@ a {
   .about__image {
     padding-top: 0;
   }
-  .text__1::after {
+  .text__item-1::after {
     display: none;
   }
   .form-block__column {
