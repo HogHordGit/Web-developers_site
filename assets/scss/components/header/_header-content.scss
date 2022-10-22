@@ -2,36 +2,37 @@
 @use "../../mixins" as *;
 
 .header {
-  &__container {
-    @extend %container;
-  }
-  &__content {
-    position: relative;
-    z-index: 1;
+    &__container {
+        @extend %container;
+    }
+    &__content {
+        position: relative;
+        z-index: 1;
 
-    width: 100%;
-  }
-  &__title {
-    text-align: center;
+        width: 100%;
+    }
+    &__title {
+        text-align: center;
 
-    @include lg-min {
-      margin: 0 0 53px;
+        @include lg-min {
+            margin: 0 0 53px;
+        }
+        @include lg-md {
+            margin: 0 0 43px;
+        }
+        @include md {
+            margin: 0 0 33px;
+        }
     }
-    @include lg-md {
-      margin: 0 0 43px;
-    }
-    @include md {
-      margin: 0 0 33px;
-    }
-  }
-  &__buttons {
-    display: flex;
-    justify-content: center;
+    &__buttons {
+        display: flex;
+        justify-content: center;
 
-    gap: $gap;
-    @include sm {
-      align-items: center;
-      flex-direction: column;
+        gap: $gap;
+
+        @include sm {
+            align-items: center;
+            flex-direction: column;
+        }
     }
-  }
 }
